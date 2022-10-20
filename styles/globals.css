@@ -105,7 +105,7 @@ button.add {
   padding: 1rem;
   background-color: var(--background-blue);
   border-radius: 6px;
-  box-shadow: -2px 2px 8px 0px #10181E;
+  box-shadow: -2px 2px 8px 0px #0f0f0f;
   border-top: 1px solid;
   border-right: 1px solid;
   border-color:#117ca049;
