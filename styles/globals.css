@@ -5,7 +5,6 @@
   --blue: #19B0E3;
   --text-color: white;
   --red: #A52A2A;
-
   --lateral-margins: 5vw;
   --max-width: calc(100vw - calc(var(--lateral-margins) * 2));
 
@@ -26,12 +25,12 @@ h1{
   margin: 0;
 }
 
-section#note-section {
+#section {
   width: var(--max-width);
   margin: auto;
   background-color: var(--background-dark-color);
   border-radius: 6px;
-  padding: 1rem;
+  padding: 1.5rem;
   box-shadow: -2px 2px 8px 0px #0f0f0f;
 }
 
@@ -41,13 +40,13 @@ section#note-section {
   /* le damos un ancho y el resto para el aside  ademas ponemos el grow a 1 para que ocupe todo lo que pueda*/
   flex-grow: 1;
   justify-content: center;
-  margin-bottom: 1rem;
-  gap: 2rem;
+  margin-bottom: 1.5rem;
+  gap: 1.5rem;
 }
 
 .note {
   padding: 2rem;
-  gap: 2rem;
+  gap: 1.5rem;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -55,20 +54,25 @@ section#note-section {
   background-color: var(--background-blue);
   border-radius: 6px;
   box-shadow: -2px 2px 8px 0px #10181E;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-color:#117ca049;
 }
 
-.note .props{
-  vertical-align: bottom;
+.props{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 button {
   padding: 10px;
-  font-weight: 600;
-  margin-right: 0.2rem;
   font-size: 1rem;
   color: white;
   border-radius: 6px;
 }
+
 button:hover {
   cursor: pointer;
   filter: brightness(120%);
@@ -92,21 +96,31 @@ button.add {
 }
 
 .note-form {
-  padding: 8rem;
+  max-width: 30rem;
   display: flex;
-  flex: 1;
   flex-direction: column;
-  align-items: center;  
-  position: relative;
-}
-
-.note-form .field {
-  width: 40rem;
-  display: flex;
   flex: 1;
-  flex-direction: row;
+  gap: 1rem;
+  margin: auto;
+  padding: 1rem;
+  background-color: var(--background-blue);
+  border-radius: 6px;
+  box-shadow: -2px 2px 8px 0px #10181E;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-color:#117ca049;
 }
 
-.note-form .field .label {
-  width: 8rem;
+.field{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
+}
+
+#title{
+  height: 2rem;
+}
+#content{
+  height: 7rem;
 }

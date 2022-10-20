@@ -2,7 +2,6 @@ import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import styles from '../styles/Home.module.css'
 
 
 export default function FormPonentes() {
@@ -37,20 +36,22 @@ export default function FormPonentes() {
   };
   return (
     <div className="note-form">
-      <h1>Añadir Nota</h1>
       <p style={{color: 'var(--alt-primary-color)'}}>{errorMsg}</p>
       <div className="field">
-        <label className="label" htmlFor="title">Titulo:</label>
+        <label className="label" htmlFor="title"><h2>Titulo</h2></label>
         <input className="input" type="text" id="title" name="title" value={title} onChange={onTitleChange} />
       </div>
       <div className="field">
-        <label className="label" htmlFor="content">Contenido:</label>
+        <label className="label" htmlFor="content"><h2>Contenido</h2></label>
         <textarea className="input" name="content" id="content" value={content} onChange={onContentChange}/>
       </div>
-      <button className="blue" onClick={async () => await submitNote()}>Añadir Nota</button>
-      <Link href="/">
-        <button className="red">Cancel</button>
-      </Link>
+
+      <div className="props">
+        <button className="blue" onClick={async () => await submitNote()}>Añadir Nota</button>
+        <Link href="/">
+          <button className="red">Cancelar</button>
+        </Link>
+      </div>
     </div>
   )
 }

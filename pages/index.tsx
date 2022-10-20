@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
       <main>
         <h1>📝 Note App</h1>
-        <section id="note-section">
+        <section id="section">
           <NoteList />
           <Link href="/notes/new" passHref>
             <button className="add">+</button>
