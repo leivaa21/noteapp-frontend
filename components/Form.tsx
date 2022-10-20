@@ -47,9 +47,9 @@ export default function FormPonentes() {
         <label className="label" htmlFor="content">Contenido:</label>
         <textarea className="input" name="content" id="content" value={content} onChange={onContentChange}/>
       </div>
-      <button onClick={async () => await submitNote()}>Añadir Nota</button>
+      <button className="blue" onClick={async () => await submitNote()}>Añadir Nota</button>
       <Link href="/">
-        <button className="cancelBtn">Cancel</button>
+        <button className="red">Cancel</button>
       </Link>
     </div>
   )

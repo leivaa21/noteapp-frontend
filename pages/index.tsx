@@ -8,16 +8,17 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Notas</title>
+        <title>Note App</title>
         <meta name="description" content="Tu WebApp de notas" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet" />
       </Head>
       <main>
+        <h1>📝 Note App</h1>
         <section id="note-section">
-          <h1 className='title'>Notas</h1>
           <NoteList />
           <Link href="/notes/new" passHref>
-            <button className={styles.botonAñadir}>+</button>
+            <button className="add">+</button>
           </Link>
         </section>
       </main>

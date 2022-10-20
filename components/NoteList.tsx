@@ -43,19 +43,16 @@ export default function NoteList() {
 
   return (
     <div className="note-wrapper">
-
       {notes.map(note => (
         <div className="note" key={note.id}>
-          <div className="content">
-            <h3>{note.title}</h3>
-            <p>{note.content}</p>
-          </div>
-          <div className="options">
-            <button className="edit" onClick={(e) => {
+          <h2>{note.title}</h2>
+          <p>{note.content}</p>
+          <div className="props">
+            <button className="blue" onClick={(e) => {
               e.preventDefault();
               onEditButtonClick(note.title)
             }}>Editar</button> 
-            <button className="delete" onClick={(e) => {
+            <button className="red" onClick={(e) => {
               e.preventDefault();
               onDeleteButtonClick(note.id)
             }}>Eliminar</button>
